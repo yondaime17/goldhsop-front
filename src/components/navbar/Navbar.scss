@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  h3 {
+    color: white;
+    font-size: 16px;
+    padding: 7px 2px;
+    overflow: hidden;
+    &:hover {
+      color: #a8741a;
+      border-bottom: 3px solid #a8741a;
+    }
+  }
+  .active_page {
+    color: #a8741a;
+    border-bottom: 3px solid #a8741a;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.light {
+  nav {
+    .active_page {
+      border-bottom: 3px solid #1b1b1b;
+    }
+    h3 {
+      color: #333;
+
+      &:hover {
+        border-bottom: 3px solid #1b1b1b;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  nav {
+    display: none;
+  }
+}

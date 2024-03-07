@@ -1,0 +1,25 @@
+.social_icons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  .social_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.light {
+  .social_icon {
+    // background: #fff5e1;
+    background: transparent;
+    border: 1px solid #1b1b1b;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+}

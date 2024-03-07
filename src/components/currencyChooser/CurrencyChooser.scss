@@ -1,0 +1,29 @@
+.currency_chooser {
+  margin-left: 10px;
+
+  .chosen_currency {
+    color: white;
+    font-size: 16px;
+  }
+  .dropdown_icon {
+    margin-top: 10px;
+  }
+}
+
+.light {
+  .currency_chooser {
+    .chosen_currency {
+      color: #2e2e2e;
+    }
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  .currency_chooser {
+    .chosen_currency {
+      .currency_icon {
+        display: none;
+      }
+    }
+  }
+}

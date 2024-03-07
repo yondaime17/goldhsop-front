@@ -1,0 +1,20 @@
+.login_btn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.light {
+  .login_btn {
+    p {
+      color: #333;
+    }
+  }
+}
+
+@media only screen and (max-width: 1125px) {
+  .login_btn {
+    display: none;
+  }
+}

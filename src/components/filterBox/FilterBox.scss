@@ -1,0 +1,123 @@
+.filter_box {
+  width: 100%;
+  margin-bottom: 10px;
+  .filter_tool {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 20px;
+    width: 100%;
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+}
+
+.filter_btn{
+  margin-top: 31px;
+  border-radius: 5px;
+  background: transparent;
+  background: #a8741a;
+  font-size: 17px;
+  padding: 3px 15px;
+  width: auto;
+  font-weight: normal;
+}
+
+.input_choosers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  input {
+    background: #2d2d2d;
+    padding: 6px 10px;
+    width: 120px;
+    caret-color: white;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #5a5a5a;
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}
+
+.light {
+  .input_choosers {
+    input {
+      background: transparent;
+      border: 1px solid #333;
+      color: black;
+      caret-color: black;
+      &::placeholder {
+        color: #333;
+      }
+    }
+  }
+  .filter_box {
+    .filter_tool {
+      button {
+        h6 {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1074px) {
+  .mobile_filter {
+    display: block;
+    margin-bottom: -15px;
+  }
+  .desktop_filter {
+    display: none;
+  }
+  .filter_tool {
+    flex-direction: column;
+    padding: 15px;
+
+    .title {
+      font-size: 17px;
+      color: white;
+      margin-top: 15px;
+    }
+    .multi_select_btn,
+    .MultiSelectDropdown,
+    input,
+    .input_choosers,
+    .min,
+    .max,
+    .category,
+    .prob_chooser,
+    .price_chooser,
+    .weight_chooser,
+    .metal_chooser {
+      width: 100%;
+    }
+    .multi_select_btn,
+    .multiselect_dropdown,
+    input {
+      background: white;
+    }
+    input,
+    .choose_option {
+      color: black;
+    }
+    input {
+      caret-color: black;
+      &::placeholder {
+        color: black;
+      }
+    }
+    .input_choosers {
+      flex-direction: column;
+    }
+    .option_label {
+      color: black;
+    }
+    .light .option_label {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.add_to_wishlist {
+  background: #2e2e2e;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: #a8741a;
+  }
+}
+
+.in_wishlist {
+  background: #a8741a;
+}
+
+
+.light {
+  .add_to_wishlist {
+    background: transparent;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    &:hover {
+      background: #2e2e2e;
+      color: white;
+    }
+  }
+  .in_wishlist {
+    background: #2e2e2e;
+  }
+}

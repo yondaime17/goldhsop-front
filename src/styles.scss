@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "BPG_Nino_Mtavruli";
+  src: local("BPG_Nino_Mtavruli"),
+    url("./media/fonts/bpg_nino_mtavruli_normal.ttf") format("ttf")
+      url("./media/fonts/bpg_nino_mtavruli_normal.woff") format("woff");
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-family: BPG_Nino_Mtavruli;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.link {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.link,
+button,
+button p {
+  font-family: "Playfair Display", serif;
+}
+
+input {
+  border: 0;
+}
+
+.message {
+  margin-top: 5px;
+  color: white;
+}
+
+.error_message {
+  color: #a8741a;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.page_title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #a8741a;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.modal_title {
+  color: #a8741a;
+}
+
+.light,
+.dark {
+  position: relative;
+}
+
+.light {
+  .message {
+    color: #333;
+  }
+  p {
+    color: #333;
+  }
+  .error_message {
+    color: #333;
+  }
+  .page_title {
+    color: #333;
+  }
+}
+
+.page {
+  padding: 30px 55px;
+}
+
+@media only screen and (max-width: 1125px) {
+  .page {
+    padding: 30px 25px;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  .page {
+    padding: 30px 15px;
+  }
+}

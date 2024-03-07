@@ -1,0 +1,36 @@
+.price_chooser {
+  .title {
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  input {
+    background: #2f2f2f;
+    padding: 5px 0px;
+    caret-color: white;
+    color: white;
+    &::placeholder {
+      color: #aaa;
+    }
+    &:focus-within {
+      outline: 0;
+    }
+  }
+}
+
+.light {
+  .price_chooser {
+    .title {
+      color: #333;
+    }
+    input {
+      background: transparent;
+      width: 130px;
+      caret-color: black;
+      color: black;
+      &::placeholder {
+        color: #333;
+      }
+    }
+  }
+}

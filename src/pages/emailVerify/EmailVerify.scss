@@ -1,0 +1,25 @@
+.email_verify {
+  padding: 0px 55px;
+  hr {
+    background: 2px solid #333;
+  }
+  .verify_message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    p {
+      font-size: 22px;
+      color: white;
+      font-style: italic;
+    }
+  }
+}
+
+.light {
+  .verify_message {
+    p {
+      color: #333;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+  background: #323b43 !important;
+}
+
+.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+  .link {
+    h3 {
+      padding: 5px 20px;
+      color: white;
+    }
+    .active_page {
+      background: #a8741a;
+    }
+    &:hover {
+      background: #a8741a;
+    }
+  }
+  .socials {
+    padding: 10px 20px;
+  }
+  .divider {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 704px) {
+  .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+    display: none !important;
+  }
+}

@@ -1,0 +1,33 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  .my_items_btn {
+    .link {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      h6 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.light {
+  .user {
+    .my_items_btn {
+      h6 {
+        color: #333;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .user {
+    .my_items_btn {
+      display: none;
+    }
+  }
+}

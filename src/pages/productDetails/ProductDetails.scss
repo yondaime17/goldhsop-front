@@ -1,0 +1,133 @@
+.product_details_page {
+  .product_images{
+    width: 400px;
+    position: relative;
+    .product_previews{
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      img{
+        border-radius: 5px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .product_cover {
+    width: 100%;
+    height: 400px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+    .product_actions {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: auto;
+    }
+  }
+  .parameters{
+    h6{
+      color: lightgrey;
+    }
+  }
+  .product_owner{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    h5, p {
+      font-size: 18px;
+      color: white;
+    }
+    p{
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  }
+  .product_details {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    .product_title {
+      h4 {
+        color: #a8741a;
+      }
+    }
+
+    .product_description {
+      align-items: flex-start;
+      width: calc(100% - 450px);
+      .price {
+        margin-top: 20px;
+        p {
+          font-size: 22px;
+        }
+      }
+
+      .description {
+        margin-top: 15px;
+        color: #ccc;
+        font-size: 18px;
+      }
+      h4 {
+        margin-top: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.light {
+  .product_details_page {
+    
+    h4 {
+      color: #333;
+    }
+    .product_description {
+      .product_title {
+        h4 {
+          color: #333;
+        }
+      }
+      .description {
+        color: #2e2e2e;
+      }
+    }
+    .price {
+      p {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    
+  }
+  .parameters{
+    h6{
+      color: #333;
+    }
+  }
+  .product_owner{
+    h5, p {
+      color: #333;
+    }
+    
+  }
+}
+
+
+
+@media only screen and (max-width: 833px) {
+  
+.product_images, .product_description{
+  width: 100% !important;
+}
+.product_description{
+  margin-left: -10px;
+}
+}

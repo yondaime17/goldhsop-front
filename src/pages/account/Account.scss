@@ -1,0 +1,15 @@
+.login_msg {
+  font-size: 18px;
+}
+
+.account_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 100px;
+}
+
+.light {
+  .login_msg {
+    color: #333;
+  }
+}

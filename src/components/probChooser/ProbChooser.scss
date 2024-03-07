@@ -1,0 +1,36 @@
+.prob_chooser {
+  .title {
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  .prob_checkboxes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: -10px;
+  }
+}
+
+.prob_checkbox {
+  margin-left: -10px;
+  label {
+    color: #616161;
+  }
+}
+
+.light {
+  .prob_chooser {
+    .title {
+      color: #333;
+    }
+    h6 {
+      color: black;
+    }
+  }
+  label {
+    color: black;
+  }
+}

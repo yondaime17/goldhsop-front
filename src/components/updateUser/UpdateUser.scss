@@ -1,0 +1,40 @@
+.update_user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 290px;
+  input {
+    background: #2f2f2f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+  }
+  .confirm {
+    margin-top: 20px;
+  }
+  .update_user_btn {
+    background: #4682b4;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+}
+
+.light {
+  .update_user {
+    input {
+      background: transparent;
+      border: 1px solid #333;
+      color: black;
+      bacer-color: black;
+      &::placeholder {
+        color: grey;
+      }
+      &::focus-within {
+        outline: 1px solid black;
+      }
+    }
+  }
+}

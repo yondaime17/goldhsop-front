@@ -1,0 +1,109 @@
+.add_item_form {
+    .input_fields {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      .basic_field {
+        width: calc(100% / 6 - 9px);
+        min-width: 170px;
+      }
+    }
+    label {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    input {
+      margin-top: 5px;
+      padding: 7px 10px;
+      border-radius: 7px;
+      border: 2px solid #5a5a5a;
+      background: #2e2e2e;
+      color: white;
+      width: 100%;
+      caret-color: white;
+    }
+    textarea {
+      caret-color: white;
+      margin-top: 5px;
+      border: 2px solid #5a5a5a;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+      background: #2e2e2e;
+      color: white;
+    }
+    .image_upload {
+      margin-top: 20px;
+    }
+  }
+  
+  .add_item_btn {
+    width: 100%;
+    border: 2px solid #a8741a;
+    background: #a8741a;
+  
+    border-radius: 10px;
+    font-size: 20px;
+    height: 50px;
+    margin-top: 35px;
+    color: white;
+    font-weight: 400;
+    &:hover {
+      background: transparent;
+      color: #a8741a;
+    }
+  }
+  
+  .light {
+    .add_item_form {
+      label {
+        color: #333;
+      }
+  
+      input {
+        border: 2px solid #333;
+        background: #eee;
+        color: black;
+        caret-color: black;
+        background: #ccc;
+      }
+      textarea {
+        border: 2px solid #333;
+        background: #eee;
+        color: black;
+        caret-color: black;
+        background: #ccc;
+      }
+    }
+  
+    .add_item_btn {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      &:active {
+        box-shadow: none;
+      }
+      &:hover {
+        background: #a8741a;
+        color: white;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1181px) {
+    .add_item_form {
+      .input_fields {
+        .basic_field {
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+    }
+  }
+  

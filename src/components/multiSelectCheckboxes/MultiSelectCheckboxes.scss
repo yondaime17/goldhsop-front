@@ -1,0 +1,105 @@
+.MultiSelectDropdown {
+  position: relative;
+  width: 150px;
+}
+
+.multiselect_btn {
+  background: #2f2f2f;
+  border: 1px solid #5a5a5a;
+  padding: 5px 10px;
+  padding-bottom: 6px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:focus-within {
+    outline: 1px solid white;
+  }
+  .choose_option {
+    color: #aaa;
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: lowercase;
+  }
+}
+.multiselect_unbordered {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.multiselect_dropdown {
+  width: 100%;
+  background: #2e2e2e;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 2;
+  position: absolute;
+  top: 26px;
+  left: 0;
+}
+
+.multiselect_options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+}
+
+.multiselect_option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.option_label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.MultiSelectCheckboxes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.MultiSelectCheckboxes .selected-options {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.light {
+  .multiselect_btn {
+    background: transparent;
+    border: 1px solid #333;
+
+    .choose_option {
+      color: black;
+    }
+    &:focus-within {
+      outline: 1px solid #333;
+    }
+  }
+  .multiselect_dropdown {
+    background: #f3f3f3;
+    border: 1px solid #333;
+  }
+}
+
+@media only screen and (max-width: 974px) {
+  .MultiSelectDropdown {
+    .multiselect_btn {
+      width: 100%;
+    }
+  }
+
+  .multiselect_btn,
+  .multiselect_dropdown {
+    background: white;
+  }
+}

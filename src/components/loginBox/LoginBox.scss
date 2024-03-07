@@ -1,0 +1,47 @@
+.login_box {
+  h5 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  input {
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background: #f3f3f3;
+    margin-bottom: 5px;
+  }
+  .password_field {
+    position: relative;
+  }
+
+  .reset_password_btn {
+    position: absolute;
+    right: 5px;
+    bottom: 7px;
+  }
+}
+
+.authorization_btn {
+  width: 100%;
+  background: #a8741a;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: 1px solid #a8741a;
+  color: white;
+  &:hover {
+    color: #a8741a;
+    background: transparent;
+  }
+}
+
+.not_registered {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
