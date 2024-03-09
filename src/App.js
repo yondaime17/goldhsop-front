@@ -215,8 +215,8 @@ export default function App() {
     element={<ProductDetails currencyChange={currencyChange} wishlist={wishlist} setWishlist={setWishlist} />}
   />
   <Route
-    path="/:language?/products/:category?/:standard?/:minPrice?/:maxPrice?/:minWeight?/:maxWeight?/:seller?/"
-    element={<Searched products={products}/>}
+    path="/:language?/products/category/:category/standard/:standard/minPrice/:minPrice/maxPrice/:maxPrice/minWeight/:minWeight/maxWeight/:maxWeight/seller/:seller/"
+    element={<Searched products={products} categories={categories}/>}
   />
   <Route
     path="/:language?/items"

@@ -44,7 +44,6 @@ const MultiSelectCheckboxes = ({ options, needsTranslation, getData }) => {
     }
   };
 
-  getData(selectedOptions)
 
   
 
@@ -54,7 +53,14 @@ const MultiSelectCheckboxes = ({ options, needsTranslation, getData }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+
   }, []);
+
+  useEffect(() => {
+    getData(selectedOptions)
+
+  }, [selectedOptions])
+  
 
   return (
     <div className="MultiSelectDropdown" ref={dropdownRef}>
