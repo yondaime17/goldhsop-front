@@ -11,6 +11,15 @@ header {
   }
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  h5{
+    font-size: 16px;
+  }
+}
+
 .header_btns {
   margin-right: 10px;
 }
@@ -20,21 +29,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 55px;
-  .left_box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 35px;
-    .socials {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    h5 {
-      strong {
-      }
-    }
-  }
+  
+  
 }
 
 .bottom_bar {
@@ -149,7 +145,7 @@ header {
     .authentication span {
       color: black;
     }
-    .left_box {
+    .socials {
       h5 {
         strong {
           color: #2e2e2e;
@@ -212,6 +208,11 @@ header {
 
     .left_box {
       display: none !important;
+    }
+    .socials{
+      h5{
+        display: none;
+      }
     }
   }
 }

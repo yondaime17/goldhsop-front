@@ -7,14 +7,16 @@ const SocialIcons = ({ whiteColor }) => {
   return (
     <div className="social_icons">
       <button className="social_icon">
+        <a target="_blank" href="https://www.facebook.com/goldshopi">
         <FaFacebookF size="14px" color={whiteColor ? "white" : "#616161"} />
+        </a>
       </button>
-      <button className="social_icon">
+      {/* <button className="social_icon">
         <FaInstagram size="14px" color={whiteColor ? "white" : "#616161"} />
       </button>
       <button className="social_icon">
         <FiYoutube size="16px" color={whiteColor ? "white" : "#616161"} />
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -57,12 +57,12 @@ export default function MobileMenu({ isHomePage, isItemsPage, isSellersPage }) {
         <Link className="link" to={`/${language}/sellers`}>
           <h3 className={isSellersPage ? "active_page" : ""}>მოვაჭრეები</h3>
         </Link>
-        <div className="divider">
+        {/* <div className="divider">
           <Divider color="white" />
           <div className="socials">
             <SocialIcons whiteColor={true} />
           </div>
-        </div>
+        </div> */}
       </List>
     </Box>
   );

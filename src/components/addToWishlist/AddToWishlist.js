@@ -44,8 +44,8 @@ const AddToWishlist = ({ wishlist, setWishlist, product }) => {
               ? "#5a5a5a"
               : "#aaa"
             : lightTheme
-            ? "white"
-            : "#aaa"
+            ? "white" : 
+            "white"
             
         }
       />

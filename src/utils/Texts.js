@@ -14,7 +14,6 @@ const texts = {
     watches: "Watches",
     coins: "Coins",
     other: "Other",
-    goldshop: "Gold Shop",
     search: "Search",
     choose: "Choose",
     category: "Category",
@@ -82,7 +81,8 @@ const texts = {
     metal: "Metal",
     gold: "Gold",
     silver: "Silver",
-    wishlist: "Wishlist"
+    wishlist: "Wishlist",
+    share: "share",
   },
   ka: {
     login: "შესვლა",
@@ -99,7 +99,7 @@ const texts = {
     watches: "საათები",
     coins: "მონეტები",
     other: "სხვა",
-    goldshop: "ოქროს ნივთების მაღაზია",
+    topic: "ოქროს ნივთების ყიდვა/გაყიდვა",
     search: "ძიება",
     choose: "აირჩიეთ",
     category: "კატეგორია",
@@ -161,13 +161,13 @@ const texts = {
     notVerified: "თქვენი ელ-ფოსტა ვერიფიცირებული არ არის",
     emailVerified: "ელ-ფოსტის ვერიფიკაცია წარმატებით დასრულდა!",
     goFilter: "ძიება",
-    topic: "ოქროს ნივთების ყიდვა / გაყიდვა",
     view: "ნახვა",
     contact: "კონტაქტი",
     metal: "ლითონი",
     gold: "ოქრო",
     silver: "ვერცხლი",
-    wishlist: "მოწონებულები"
+    wishlist: "მოწონებულები",
+    share: "გაზიარება",
   },
 };
 

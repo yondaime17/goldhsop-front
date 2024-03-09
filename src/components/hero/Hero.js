@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.scss";
 
-const bannerData = [
-  "https://res.cloudinary.com/dgyqivinq/image/upload/v1705410493/goldshop/j6uvardl40lvjoeppl3i.jpg",
-  "https://res.cloudinary.com/dgyqivinq/image/upload/v1705410493/goldshop/srzisor9pwh2abgyfheh.jpg",
-  // Add more image URLs as needed
-];
+import texts from "../../utils/Texts";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Hero = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % bannerData.length);
-    }, 3000);
+  const language = useLanguage();
+  const text = texts[language] || texts.ka
 
-    return () => clearInterval(intervalId);
-  }, [activeIndex]); // Adding activeIndex as a dependency
 
   return (
     <div className="hero">
@@ -27,7 +19,7 @@ const Hero = () => {
       <div className="overlay">
         <h5>
           <strong>
-            ოქროს ნივთების <br /> ყიდვა / გაყიდვა
+            {text.goldshop}
           </strong>
         </h5>
       </div>

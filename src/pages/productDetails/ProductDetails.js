@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link,  useLocation  } from "react-router-dom";
 import Cookies from "js-cookie";
 import texts from "../../utils/Texts";
 import { useLanguage } from "../../context/LanguageContext";
 import AddToWishlist from "../../components/addToWishlist/AddToWishlist";
 
 import "./ProductDetails.scss";
+import { Helmet } from "react-helmet";
+import Share from "../../components/share/Share";
 
 const ProductDetails = ({ currencyChange, wishlist, setWishlist }) => {
+  const location = useLocation()
   const { language } = useLanguage();
   const text = texts[language] || texts.ka;
   const { id } = useParams();
+
 
   const selectedCurrency = Cookies.get("selectedCurrency");
 
@@ -74,6 +78,12 @@ const ProductDetails = ({ currencyChange, wishlist, setWishlist }) => {
 
   return (
     <div className="product_details_page page">
+    { product &&  <Helmet>
+        <title>Shopgold</title>
+        <meta property="og:title" content={product.title} />
+        <meta property="og:description" content={product.title + " - Goldshop.ge"} />
+        <meta property="og:image" content={selectedCover} />
+      </Helmet>}
       {product && (
         <div className="product_details">
           <div className="product_images">
@@ -124,7 +134,7 @@ const ProductDetails = ({ currencyChange, wishlist, setWishlist }) => {
              <Link className="link" to={`/${owner.username}`}><h5>{owner.username}</h5></Link>
               <p>{owner.mobilePhone}</p>
             </div>
-
+            <Share url={location.pathname}/>
           </div>
         </div>
       )}

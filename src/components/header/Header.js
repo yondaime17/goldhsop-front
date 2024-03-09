@@ -69,12 +69,7 @@ export default function Header({
               src="https://res.cloudinary.com/dgyqivinq/image/upload/v1706700617/goldshop/gjda7qlfjtebfsxjonmi.png"
             />
           </div>
-          <div className="socials">
-            <SocialIcons />
-            <h5>
-              <strong>{text.topic}</strong>
-            </h5>
-          </div>
+          
         </div>
 
         <div className="header_btns">
@@ -126,7 +121,14 @@ export default function Header({
             src="https://res.cloudinary.com/dgyqivinq/image/upload/v1706700617/goldshop/gjda7qlfjtebfsxjonmi.png"
           />
         </Link>
-        <SearchBox />
+        <div className="socials">
+            <h5>
+              <strong>{text.topic}</strong>
+            </h5>
+          <SocialIcons />
+
+          </div>
+
       </div>
     </header>
   );

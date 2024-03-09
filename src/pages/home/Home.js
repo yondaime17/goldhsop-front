@@ -5,6 +5,8 @@ import Products from "../../components/products/Products";
 import texts from "../../utils/Texts";
 import "./Home.scss";
 
+import { Helmet } from 'react-helmet';
+
 export default function Home({
   lightTheme,
   categories,
@@ -18,6 +20,12 @@ export default function Home({
 
   return (
     <div className="home page">
+       <Helmet>
+        <title>Shopgold</title>
+        <meta property="og:title" content="Shopgold.ge - Home Page" />
+        <meta property="og:description" content="Buy/sell gold items - ოქროს ნივთების ყიდვა/გაყიდვა" />
+        <meta property="og:image" content="https://res.cloudinary.com/dgyqivinq/image/upload/v1705410493/goldshop/srzisor9pwh2abgyfheh.jpg" />
+      </Helmet>
       <div className="layout">
         <div className="hero_div">
           <Hero />
