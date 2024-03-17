@@ -50,7 +50,7 @@ export default function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/items");
+        const response = await fetch("https://goldhsop-back.vercel.app/api/items");
         const data = await response.json();
         setProducts(data);
       } catch (error) {}
