@@ -63,18 +63,18 @@ export default function UserDropdown({ user, logout }) {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link className="link user_menu_item" to={`/${language}/my_items`}>
+          <Link className="link user_menu_item" to={`/${user.username}`}>
             <SiMarketo color="black" size="12px" />
             <span>{text.myItems}</span>
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        {/* <MenuItem onClick={handleClose}>
           <Link className="link user_menu_item" to={`/${language}/account`}>
             <RiAccountBoxFill size="14px" color="black" />
 
             <span>{text.myAccount}</span>
           </Link>
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem onClick={() => signOut()}>
           <Link className="link user_menu_item">
             <AiOutlineLogout size="14px" color="black" />

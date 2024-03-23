@@ -21,6 +21,7 @@ import CategoryPage from "./pages/categoryPage/CategoryPage";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
 import ProductDetails from "./pages/productDetails/ProductDetails";
 import Searched from "./pages/searched/Searched";
+import Contact from "./pages/contact/Contact";
 
 import Header from "./components/header/Header";
 
@@ -60,7 +61,7 @@ export default function App() {
 
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/users");
+        const response = await fetch("https://goldhsop-back.vercel.app/api/users");
         const data = await response.json();
         setUsers(data);
       } catch (error) {}
@@ -74,7 +75,7 @@ export default function App() {
       setToken(storedToken);
 
       axios
-        .get("http://localhost:3000/api/user/profile", {
+        .get("https://goldhsop-back.vercel.app/api/user/profile", {
           headers: {
             Authorization: `Bearer ${storedToken}`,
           },
@@ -96,7 +97,7 @@ export default function App() {
 
   const login = async (formData) => {
     try {
-      const response = await fetch("http://localhost:3000/auth/login", {
+      const response = await fetch("https://goldhsop-back.vercel.app/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -113,7 +114,7 @@ export default function App() {
         saveToken(token);
   
         axios
-          .get("http://localhost:3000/api/user/profile", {
+          .get("https://goldhsop-back.vercel.app/api/user/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -160,9 +161,11 @@ export default function App() {
     Cookies.set("wishlist", JSON.stringify(wishlist));
   }, [wishlist]);
 
-  const sellers = users.filter((user) =>
+  let sellers = [];
+
+  if (users) { sellers = users.filter((user) =>
     products.some((product) => product.owner === user._id)
-  );
+  ) }
 
   return (
     <Router>
@@ -180,7 +183,7 @@ export default function App() {
             wishlist={wishlist}
           />
           <Routes>
-  {categories.map((category) => (
+  {/* {categories.map((category) => (
     <Route
       key={category}
       path="/:language/:category"
@@ -192,9 +195,9 @@ export default function App() {
         />
       }
     />
-  ))}
+  ))} */}
 
-  <Route path="/:language?/account" element={<Account user={user} />} />
+  {/* <Route path="/:language?/account" element={<Account user={user} />} /> */}
   <Route path="/:language?/verify/:verificationCode" element={<EmailVerify />} />
   <Route path="/:language?/reset-password/:token" element={<ResetPassword />} />
   <Route path="/:language?/sellers" element={<Sellers sellers={sellers} />} />
@@ -221,6 +224,10 @@ export default function App() {
   <Route
     path="/:language?/items"
     element={<Items products={products} currencyChange={currencyChange} wishlist={wishlist} setWishlist={setWishlist} />}
+  />
+  <Route
+    path="/:language?/contact"
+    element={<Contact />}
   />
   <Route
     path="/:language?/*"

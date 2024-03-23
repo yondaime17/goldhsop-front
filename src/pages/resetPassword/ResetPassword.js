@@ -29,7 +29,7 @@ const ResetPassword = ({ lightTheme }) => {
         setMessage("Password must be at least 6 characters");
         return;
       }
-      const url = `http://localhost:3000/auth/reset-password/${token}`;
+      const url = `https://goldhsop-back.vercel.app/auth/reset-password/${token}`;
 
       const response = await fetch(url, {
         method: "POST",

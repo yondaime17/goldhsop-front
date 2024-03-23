@@ -83,6 +83,9 @@ const texts = {
     silver: "Silver",
     wishlist: "Wishlist",
     share: "share",
+    filter: "Filter",
+    contact: "Contact",
+    contactMsg: "Feel free to ask any question: + 995 555 402 495"
   },
   ka: {
     login: "შესვლა",
@@ -161,6 +164,7 @@ const texts = {
     notVerified: "თქვენი ელ-ფოსტა ვერიფიცირებული არ არის",
     emailVerified: "ელ-ფოსტის ვერიფიკაცია წარმატებით დასრულდა!",
     goFilter: "ძიება",
+    filter: "ფილტრი",
     view: "ნახვა",
     contact: "კონტაქტი",
     metal: "ლითონი",
@@ -168,6 +172,8 @@ const texts = {
     silver: "ვერცხლი",
     wishlist: "მოწონებულები",
     share: "გაზიარება",
+    contact: "კონტაქტი",
+    contactMsg: "დაგვიკავშირდით: + 995 555 402 495"
   },
 };
 

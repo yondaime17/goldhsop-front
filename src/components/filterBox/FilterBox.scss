@@ -13,6 +13,21 @@
   }
 }
 
+.desktop_filter{
+  display: block;
+}
+
+.mobile_filter{
+  display: none;
+}
+
+.show_filter{
+  color: #ccc;
+  font-size: 17px;
+  margin-bottom: 20px;
+  margin-top: -5px;
+}
+
 .filter_btn{
   margin-top: 31px;
   border-radius: 5px;
@@ -42,6 +57,8 @@
   }
 }
 
+
+
 .light {
   .input_choosers {
     input {
@@ -63,9 +80,20 @@
       }
     }
   }
+  .show_filter{
+    color: #333;
+  }
 }
 
+
+
 @media only screen and (max-width: 1080px) {
+  .desktop_filter{
+    display: none;
+  }
+  .mobile_filter{
+    display: block;
+  }
   .filter_tool{
     .min, .max{
       width: 50%;

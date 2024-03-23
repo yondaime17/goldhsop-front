@@ -26,7 +26,7 @@ const ProductDetails = ({ currencyChange, wishlist, setWishlist }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/items/${id}`);
+        const response = await fetch(`https://goldhsop-back.vercel.app/api/items/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch product");
         }
@@ -134,7 +134,7 @@ const ProductDetails = ({ currencyChange, wishlist, setWishlist }) => {
              <Link className="link" to={`/${owner.username}`}><h5>{owner.username}</h5></Link>
               <p>{owner.mobilePhone}</p>
             </div>
-            <Share url={location.pathname}/>
+            {/* <Share url={location.pathname}/> */}
           </div>
         </div>
       )}

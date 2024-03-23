@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import texts from "../../utils/Texts";
 import { useLanguage } from "../../context/LanguageContext";
@@ -9,7 +9,6 @@ import ProbChooser from "../probChooser/ProbChooser";
 import PriceChooser from "../priceChooser/PriceChooser";
 import WeightChooser from "../weightChooser/WeightChooser";
 
-import MobileFilter from "../mobileFilter/MobileFilter";
 
 import "./FilterBox.scss";
 
@@ -17,13 +16,13 @@ export default function FilterBox({ seller }) {
   const { language } = useLanguage();
   const text = texts[language] || texts.en;
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [categories, setCategories] = useState([]);
   const [probe, setProbe] = useState([]);
   const [price, setPrice] = useState([null, null]);
   const [weight, setWeight] = useState([null, null]);
   const [sellerId, setSellerId] = useState("any");
+  const [showOnMobile, setShowOnMobile] = useState(false)
 
 const applyFilters = () => {
 
@@ -50,24 +49,31 @@ const applyFilters = () => {
   }, [sellerId]);
 
  
-  // Clear query parameters when component unmounts
+  const toggleOnMobile = () => {
+    setShowOnMobile(!showOnMobile)
+  }
  
 
   return (
     <div className="filter_box">
-      <div className="desktop_filter">
-        <div className="filter_tool">
+      
+      <div className="mobile_filter">
+      <button className="show_filter" onClick={() => toggleOnMobile()}>{text.filter}</button>
+       {showOnMobile ?  <div className="filter_tool">
           <Categories getData={getCategories} />
           <ProbChooser getData={getProbes} />
           <PriceChooser setPrice={setPrice} />
-          <WeightChooser setWeight={setWeight} />
-        <button className="filter_btn" onClick={()=> applyFilters()}>{text.goFilter}</button>
-
-        </div>
-      </div>
-      {/* <div className="mobile_filter">
-        <MobileFilter />
-      </div> */}
+          <WeightChooser setWeight={setWeight} /> <button className="filter_btn" onClick={()=> applyFilters()}>{text.goFilter}</button></div>
+        : null} </div>
+        
+       <div className="desktop_filter">
+       <div className="filter_tool">
+          <Categories getData={getCategories} />
+          <ProbChooser getData={getProbes} />
+          <PriceChooser setPrice={setPrice} />
+          <WeightChooser setWeight={setWeight} /> <button className="filter_btn" onClick={()=> applyFilters()}>{text.goFilter}</button></div>
+       </div>
+      
     </div>
   );
 }

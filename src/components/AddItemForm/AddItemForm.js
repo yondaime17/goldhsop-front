@@ -69,7 +69,7 @@ function AddItemForm({ user }) {
       });
 
       const response = await axios.post(
-        "http:localhost:3000/api/upload",
+        "https://goldhsop-back.vercel.app/api/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

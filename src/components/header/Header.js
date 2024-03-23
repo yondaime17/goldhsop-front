@@ -68,6 +68,14 @@ export default function Header({
               alt="Shopgold.ge"
               src="https://res.cloudinary.com/dgyqivinq/image/upload/v1706700617/goldshop/gjda7qlfjtebfsxjonmi.png"
             />
+           
+          </div>
+          <div className="socials">
+
+            <h5>
+              <strong>{text.topic}</strong>
+            </h5>
+
           </div>
           
         </div>
@@ -121,13 +129,13 @@ export default function Header({
             src="https://res.cloudinary.com/dgyqivinq/image/upload/v1706700617/goldshop/gjda7qlfjtebfsxjonmi.png"
           />
         </Link>
-        <div className="socials">
-            <h5>
-              <strong>{text.topic}</strong>
-            </h5>
-          <SocialIcons />
-
-          </div>
+        <div className="right_box">
+        <Link className="link contact_link" to={language + "/contact"}>
+          {text.contact}
+        </Link>
+        <SocialIcons />
+        </div>
+       
 
       </div>
     </header>

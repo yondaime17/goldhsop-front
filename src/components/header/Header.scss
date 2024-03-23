@@ -10,7 +10,11 @@ header {
     }
   }
 }
-
+.left_box{
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
 .socials {
   display: flex;
   align-items: center;
@@ -128,7 +132,22 @@ header {
   }
 }
 
+.right_box{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.contact_link{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
 .light {
+  .contact_link{
+    color: #333;
+  }
   header {
     .logo {
       h1 {
